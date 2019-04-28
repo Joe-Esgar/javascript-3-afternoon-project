@@ -187,14 +187,13 @@ var numsArr = [[1, 2, 3, 4], [5, 6], [7, 8, 9, 10, 11]];
 */
 
 // Code Here
-
 function looper() {
   for (let i = 0; i < numsArr.length; i++) {
-    for (let k = numsArr[i].length - 1; k >= 0; k--) {
+    for (let k = 0; k < numsArr[i].length; k++) {
       if (numsArr[i][k] % 2 === 0) {
-        numArr[i].splice([i][k], 1, "even");
-      } else if (numsArr[i][k] % 2 !== 0) {
-        numsArr[i].splice([k], 1, "odd");
+        numsArr[i][k] = "even";
+      } else {
+        numsArr[i][k] = "odd";
       }
     }
   }
